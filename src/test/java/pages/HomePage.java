@@ -16,15 +16,7 @@ public class HomePage {
    @FindBy(xpath="//button[text()='Login']")
 	WebElement LoginBtn ;
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
+ 
   public void ClickonLoginBtn()
   {
 	LoginBtn.click();  

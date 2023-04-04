@@ -5,15 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage  {
+public class LoginPage extends HomePage  {
 	WebDriver driver ;
 	
 	public LoginPage(WebDriver driver) {
-	
-	 this.driver =driver ;
-	  PageFactory.initElements(this.driver,this);
-	
-	}
+	  super(driver);
+	     }
  
 
 @FindBy(xpath="//input[@id='username']")
@@ -32,13 +29,13 @@ WebElement  LoginBtn;
 
 
 
-public void  EnterUsername()
+public void  EnterUsername(String username)
 {
-	Usernametxt.sendKeys("Admin");
+	Usernametxt.sendKeys(username);
 }
-public void  EnterPassword()
+public void  EnterPassword(String password)
 {
-	passwordtxt.sendKeys("Admin");
+	passwordtxt.sendKeys(password);
 }
 public void EnterLoginBtn() {
 	LoginBtn.click();
